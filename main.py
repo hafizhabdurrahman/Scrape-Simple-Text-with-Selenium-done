@@ -14,12 +14,12 @@ def get_drvier():
   options.add_argument("disable-blink-features=AutomationControlled")
 
   driver = webdriver.Chrome(options=options)
-  driver.get("http://automated.pythonanywhere.com")
+  driver.get("https://nasional.kompas.com/read/2023/03/09/15430281/kepada-menpora-baru-zainudin-amali-ingatkan-soal-sea-games-2023-dan?_gac=1.225327336.1678351420.Cj0KCQiApKagBhC1ARIsAFc7Mc7ck6A4clWYTcJ0cAPQcPynqjpdijVMAk1NKuCBu5J_By7PWRCbFtwaApjeEALw_wcB")
   return driver
 
 def main():
   driver = get_drvier()
-  element = driver.find_element(by="xpath", value="/html/body/div[1]/div/h1[1]")
+  element = driver.find_element(by="xpath", value="/html/body/div[1]/div[3]/div[4]/div[1]/div[5]/div[2]/div[2]")
   return element.text
 
 print(main())
